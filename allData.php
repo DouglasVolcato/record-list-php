@@ -18,20 +18,18 @@ $all = $data->fetchAll();
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="table.css" />
     <title>All data</title>
   </head>
 
   <body>
-    <h2>List of records</h2>
-
-    <main>
+    
+    <main class="mx-auto w-25 d-flex flex-column">
+      <h2 class="text-center text-primary">List of records</h2>
       <a class="btn btn-success" href="signup.php">ADD NEW</a>
-      <br />
     </main>
     <br />
 
-    <table>
+    <table class="w-100">
       <tr>
         <th>Firstname</th>
         <th>Lastname</th>
@@ -43,10 +41,10 @@ $all = $data->fetchAll();
         foreach($all as $val){
       ?>
 
-      <tr>
-        <td><?=$val['firstName']?></td>
-        <td><?=$val['lastName']?></td>
-        <td><?=$val['address']?></td>
+      <tr class="border border-dark">
+        <td class="border border-dark p-2"><?=$val['firstName']?></td>
+        <td class="border border-dark p-2"><?=$val['lastName']?></td>
+        <td class="border border-dark p-2"><?=$val['address']?></td>
         <td>
           <a class="btn btn-danger text-light" href="delete.php?id=<?=$val['id']?>&req=delete">DELETE</a>
           <a class="btn btn-success text-light" href="edit.php?id=<?=$val['id']?>">EDIT</a>
