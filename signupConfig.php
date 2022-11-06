@@ -69,7 +69,7 @@ class signupConfig{
 
     public function fetchOne(){
         try{
-            $stm = $this->dbCnx->prepare("SELECT FROM users WHERE id=?");
+            $stm = $this->dbCnx->prepare("SELECT * FROM users WHERE id=?");
             $stm->execute([$this->id]);
             return $stm->fetchAll();
 

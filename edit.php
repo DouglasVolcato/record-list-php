@@ -14,7 +14,6 @@ if(isset($_POST['edit'])){
 }
 $record = $data->fetchOne();
 $val = $record[0];
-var_dump($record);
 
 ?>
 
